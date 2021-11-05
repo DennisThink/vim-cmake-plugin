@@ -1,2 +1,3 @@
 autocmd BufNewFile,BufRead CMakeLists.txt set filetype=cmaked
-autocmd FileType cmaked execute 'setlocal dict+=~/.vim/plugged/vim-cmake-plugin/dict/cmake.txt'
+let s:file_path = expand('<sfile>:p:h')
+set dictionary+=s:file_path/../dict/
